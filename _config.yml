@@ -1,0 +1,94 @@
+# Site Settings
+theme: bulma-clean-theme
+lang: pt
+title: J. Studio Design
+tagline:
+email:
+description: >
+  J. Studio Design é um estúdio de design focado em criar experiências digitais únicas e impactantes. 
+  Nossa missão é transformar ideias em realidade, oferecendo soluções criativas e inovadoras para nossos clientes.
+baseurl: ""
+url: "https://jstudio3design.github.io"
+permalink: pretty
+#favicon: /path/to/favicon.png
+gh_sponsor: 
+#hide_share_buttons: true
+theme_color: '#6C1DD5'
+fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
+force_theme: dark
+
+paginate: 10
+paginate_path: "/blog/page:num"
+
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: J0hnn1e20
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+  # load_paths: 
+    # - node_modules
+
+#google_analytics: UA-code-here
+cookie_policy: /cookie-policy/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "J. Studio"
+      layout: post
+      image:
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: example_footer_menu
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://picsum.photos/id/16/800/600
+    show_sidebar: false
+
+social:
+
+  discord: https://discord.gg/
+  youtube: https://www.youtube.com/@J0hnn1e20
+  
