@@ -1,6 +1,6 @@
 ---
 layout: links
-title: J0hnn1e20
+title: J. Studio
 subtitle: Todas as minhas redes sociais.
 avatar: 
 avatar_alt: 
