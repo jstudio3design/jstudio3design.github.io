@@ -1,0 +1,29 @@
+{
+	"Post de Blog": {
+		"scope": "markdown,md",
+		"prefix": "blog-post",
+		"body": [
+			"---",
+			"layout: post",
+			"title:",
+			"subtitle:",
+			"date:",
+			"author:",
+			"categories:",
+			"tags:",
+			"description:",
+			"image:",
+			"hero:",
+			"hero_image:",
+			"hero_height: is-small",
+			"hero_darken: true",
+			"hero_link_text:",
+			"published: true",
+			"canonical_url: ",
+			"series:",
+			"show_sidebar: false",
+			"---",
+		],
+		"description": "Modelo para Postagens."
+	}
+}
