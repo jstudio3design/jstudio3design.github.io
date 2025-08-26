@@ -3,7 +3,7 @@ title: Renault Duster 2011
 subtitle: Product 1 tagline here
 description: This is a product description
 product_code: JJ12DTR
-layout: product
+layout: store
 image: 
 price: R$100,00
 features:
