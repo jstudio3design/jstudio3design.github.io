@@ -4,19 +4,20 @@
 #  link: /showcase/
 #- name: Galeria
 #  link: /gallery/
-#- name: Example Pages
-#  link: /#
-  dropdown: 
+- name: Nosso Site
+  link: /#
+  dropdown:
     - name: Blog
-      link: /blog/
+        link: /blog/
+    - name: Loja
+        link: /products/
 #    - name: Landing Page With Callouts
 #      link: /landing/
 #    - name: Promo Page
 #      link: /promo-page/
 #    - name: Sponsors Page
 #      link: /sponsors/
-    - name: Loja
-      link: /store/
+
 #    - name: Recipe Page
 #      link: /example-recipe/
 
