@@ -19,6 +19,7 @@ layout: default
         {% if page.rating %}
             {% include rating.html rating=page.rating %}
         {% endif %}
+        <br>
 
         {% if page.features %}
             <div class="content">
@@ -39,7 +40,7 @@ layout: default
     </div>
 
     <div class="column is-12">
-        <p class="title is-4">Description</p>
+        <p class="title is-4">Galeria</p><br>
         <div class="content">
             {{ content }}
         </div>
@@ -53,4 +54,10 @@ layout: default
             {% endfor %}
         </div>
     {% endif %}
+
+    <div class="tags my-4">
+    {% for tag in page.tags %}
+        {% include tag.html tag=tag %}
+    {% endfor %}
+
 </div>

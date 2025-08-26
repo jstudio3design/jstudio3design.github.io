@@ -1,7 +1,7 @@
 ---
 title: Início
 subtitle: Bem-vindo(a) ao meu site.
-layout: blog
+layout: page
 #callouts:
 show_sidebar: true
 hero_height: is-small
