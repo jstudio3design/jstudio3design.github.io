@@ -22,7 +22,7 @@ date: 2025-08-26
 <div class="tabs is-centered is-fullwidth is-toggle">
   <ul>
     <li><a>Descrição</a>
-      <p>Dacia Duster é um crossover subcompacto produzido e comercializado em conjunto pela fabricante francesa Renault e sua subsidiária romena Dacia desde 2010. Na América Latina, Rússia, Ucrânia , Ásia, Oriente Médio, África do Sul, Austrália e Nova Zelândia é comercializado como Renault Duster. Foi introduzido em março de 2010 e é o terceiro modelo da marca Dacia baseado na plataforma B0, depois do Sandero.</p>
+      <p>Dacia Dustser é um crossover subcompacto produzido e comercializado em conjunto pela fabricante francesa Renault e sua subsidiária romena Dacia desde 2010. Na América Latina, Rússia, Ucrânia , Ásia, Oriente Médio, África do Sul, Austrália e Nova Zelândia é comercializado como Renault Duster. Foi introduzido em março de 2010 e é o terceiro modelo da marca Dacia baseado na plataforma B0, depois do Sandero.</p>
     </li>
     <li><a>Info. Técnicas</a>
       <p>Plataforma: B0</p><br>
