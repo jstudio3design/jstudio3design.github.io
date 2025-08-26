@@ -16,6 +16,7 @@ features:
 rating: 5
 hide_hero: true
 tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro]
+date: 2025-08-26
 ---
 
 <div class="tabs is-centered is-fullwidth is-toggle">
