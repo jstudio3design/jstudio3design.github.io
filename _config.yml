@@ -81,7 +81,7 @@ highlighter: rouge
 footer_menu: example_footer_menu
 
 collections:
-  products: 
+  store: 
     output: true
     layout: store
     image: https://picsum.photos/id/16/800/600
