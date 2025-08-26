@@ -81,14 +81,13 @@ highlighter: rouge
 footer_menu: example_footer_menu
 
 collections:
-  store: 
+  products: 
     output: true
-    layout: store
+    layout: product
     image: https://picsum.photos/id/16/800/600
     show_sidebar: false
 
 social:
-
   discord: https://discord.gg/
   youtube: https://www.youtube.com/@
   
