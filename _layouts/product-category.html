@@ -6,7 +6,6 @@ show_sidebar: false
     <div class="column is-12">
         {{ page.content }}
     </div>
-
     {% if page.collection %}
         {% assign sorted_products = site[page.collection] | sort: page.sort %}
     {% else %}
