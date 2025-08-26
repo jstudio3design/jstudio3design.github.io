@@ -2,7 +2,7 @@
 title: Product 2 Name
 subtitle: Product 2 tagline here
 product_code: ABC123
-layout: store
+layout: product
 image: https://picsum.photos/id/15/600/480
 price: £0.99 + VAT
 features:
