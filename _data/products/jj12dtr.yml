@@ -29,6 +29,7 @@ motorização:
   - 4x4
   transmissão:
   - Manual 5 Velocidades
+  - Manual 6 Velocidades (Apenas 4x4)
   - Automática/Sequencial 4 Velocidades
 desempenho:
   potência:
