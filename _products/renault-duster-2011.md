@@ -5,7 +5,10 @@ description: This is a product description
 product_code: JJ12DTR
 layout: product
 image: /img/products/duster2011-lp/image.png
-price: R$100,00
+price-br: 100,00
+price-usa: 18,00
+price-euro: 12,00
+price-gbp: 16,00
 features:
     - label: Low-poly
       icon:
@@ -49,20 +52,6 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
 ![Underneath](/img/products/duster2011-lp/image2.png)
 ![Engine](/img/products/duster2011-lp/image3.png)
 ![Wheel](/img/products/duster2011-lp/image4.png)
-
-<div class="field has-addons">
-  <p class="control">
-    <span class="select">
-      <select>
-        <option>R$ 100,00</option>
-        <option>$18,00</option>
-        <option>£12,00</option>
-        <option>€16,00</option>
-      </select>
-    </span>
-  </p>
-</div>
-
 
 <!--<div class="tec" id="tab-content">
   <div id="engine">
