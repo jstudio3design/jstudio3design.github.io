@@ -8,9 +8,9 @@
   link: /#
   dropdown:
     - name: Blog
-        link: /blog/
+      link: /blog/
     - name: Loja
-        link: /products/
+      link: /products/
 #    - name: Landing Page With Callouts
 #      link: /landing/
 #    - name: Promo Page
