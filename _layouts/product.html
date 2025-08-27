@@ -12,27 +12,29 @@ layout: default
         <p class="title is-3">{{ page.title }}</p>
         <p class="subtitle is-3">{{ page.subtitle }}</p>
         <p class="title is-4 has-text-right">{{ page.price }}</p>
-        <br> <!-- Seletor de Moeda-->
-        <div class="field has-addons" style="width:100%;">
-            <div class="has-text-right" style="width:100%;">
-                <span class="select">
-                    <select>
-                        <option>R${{ page.price-br }}</option>
-                        <option>${{ page.price-usa }}</option>
-                        <option>£{{ page.price-euro }}</option>
-                        <option>€{{ page.price-gbp }}</option>
-                    </select>
-                </span>
-            </div>
-        </div> <!-- Fim do Seletor de Moeda-->
-        {% if page.product_code %}
-        <p class="subtitle is-5 has-text-right">Código de Produto: {{ page.product_code }}</p>
-        {% endif %}
-
-        {% if page.rating %}
-        {% include rating.html rating=page.rating %}
-        {% endif %}
         <br>
+        <!-- Seletor de Moeda-->
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="field has-addons" style="width:100%;">
+                <div class="has-text-right" style="width:100%;">
+                    <span class="select is-medium">
+                        <select>
+                            <option>R$ {{ page.price-br }}</option>
+                            <option>$ {{ page.price-usa }}</option>
+                            <option>£ {{ page.price-euro }}</option>
+                            <option>€ {{ page.price-gbp }}</option>
+                        </select>
+                    </span>
+                </div>
+                {% if page.rating %}
+                {% include rating.html rating=page.rating align="has-text-left" %}
+                {% endif %}
+            </div>
+        </div>
+        <br>
+        {% if page.product_code %}
+        <p class="subtitle">Código de Produto: {{ page.product_code }}</p>
+        {% endif %}
 
         {% if page.features %}
         <div class="content">
