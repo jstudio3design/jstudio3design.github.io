@@ -5,10 +5,10 @@ description: This is a product description
 product_code: JJ12DTR
 layout: product
 image: /img/products/duster2011-lp/image.png
-price-br: 100,00
-price-usa: 18,00
-price-euro: 12,00
-price-gbp: 16,00
+price-br: 100.00
+price-usa: 18.00
+price-euro: 12.00
+price-gbp: "16,00"
 features:
     - label: Low-poly
       icon:
