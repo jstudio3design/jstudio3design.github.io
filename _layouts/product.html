@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="columns is-multiline">
     <div class="column is-6">
-        <figure class="image is-4by3">
-            <img src="{{ page.image }}">
+        <figure class="image">
+            <img src="{{ page.image }} style=" max-width:100%; height:auto;">
         </figure>
     </div>
 
@@ -12,30 +12,42 @@ layout: default
         <p class="title is-3">{{ page.title }}</p>
         <p class="subtitle is-3">{{ page.subtitle }}</p>
         <p class="title is-4 has-text-right">{{ page.price }}</p>
+        <div class="field has-addons is-4 has-text-right"> <!-- Seletor De Money-->
+            <p class="control">
+                <span class="select">
+                    <select>
+                        <option>R$ 100,00</option>
+                        <option>$18,00</option>
+                        <option>£12,00</option>
+                        <option>€16,00</option>
+                    </select>
+                </span>
+            </p>
+        </div>
         {% if page.product_code %}
-            <p class="subtitle is-5 has-text-right">Código de Produto: {{ page.product_code }}</p>
+        <p class="subtitle is-5 has-text-right">Código de Produto: {{ page.product_code }}</p>
         {% endif %}
 
         {% if page.rating %}
-            {% include rating.html rating=page.rating %}
+        {% include rating.html rating=page.rating %}
         {% endif %}
         <br>
 
         {% if page.features %}
-            <div class="content">
-                {% for feature in page.features %}
-                    <p>
-                        <span class="icon">
-                            {% if feature.icon %}
-                                <i class="fas {{ feature.icon }}"></i>
-                            {% else %}
-                                <i class="fas fa-circle fa-xs"></i>
-                            {% endif %}
-                        </span>
-                        <span>{{ feature.label }}</span>
-                    </p>
-                {% endfor %}
-            </div>
+        <div class="content">
+            {% for feature in page.features %}
+            <p>
+                <span class="icon">
+                    {% if feature.icon %}
+                    <i class="fas {{ feature.icon }}"></i>
+                    {% else %}
+                    <i class="fas fa-circle fa-xs"></i>
+                    {% endif %}
+                </span>
+                <span>{{ feature.label }}</span>
+            </p>
+            {% endfor %}
+        </div>
         {% endif %}
 
         <br>
@@ -45,6 +57,7 @@ layout: default
             </span>
             <span>Comprar<span>
         </a>
+    </div>
 
     <div class="column is-12">
         <p class="title is-4"> </p><br>
@@ -54,43 +67,43 @@ layout: default
     </div>
 
     {% if site.data.reviews[page.product_code] %}
-        <div class="column is-12">
-            <p class="title is-4">Reviews</p>
-            {% for review in site.data.reviews[page.product_code] %}
-                {% include review.html %}
-            {% endfor %}
-        </div>
+    <div class="column is-12">
+        <p class="title is-4">Reviews</p>
+        {% for review in site.data.reviews[page.product_code] %}
+        {% include review.html %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     <div class="tags my-4">
-    {% for tag in page.tags %}
+        {% for tag in page.tags %}
         {% include tag.html tag=tag %}
-    {% endfor %}
+        {% endfor %}
 
-</div>
+    </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const tabs = document.querySelectorAll('.tabs li');
-  const contents = document.querySelectorAll('#tab-content > div');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tabs li');
+            const contents = document.querySelectorAll('#tab-content > div');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      // Remove 'is-active' de todas as tabs
-      tabs.forEach(t => t.classList.remove('is-active'));
-      // Adiciona 'is-active' à tab clicada
-      tab.classList.add('is-active');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove 'is-active' de todas as tabs
+                    tabs.forEach(t => t.classList.remove('is-active'));
+                    // Adiciona 'is-active' à tab clicada
+                    tab.classList.add('is-active');
 
-      // Esconde todos os conteúdos
-      contents.forEach(c => c.style.display = 'none');
-      // Mostra o conteúdo relacionado
-      const target = tab.getAttribute('data-target');
-      document.getElementById(target).style.display = 'block';
-    });
-  });
+                    // Esconde todos os conteúdos
+                    contents.forEach(c => c.style.display = 'none');
+                    // Mostra o conteúdo relacionado
+                    const target = tab.getAttribute('data-target');
+                    document.getElementById(target).style.display = 'block';
+                });
+            });
 
-  // Inicializa: mostra só a primeira aba
-  tabs[0].classList.add('is-active');
-  contents.forEach((c, i) => c.style.display = i === 0 ? 'block' : 'none');
-});
-</script>
+            // Inicializa: mostra só a primeira aba
+            tabs[0].classList.add('is-active');
+            contents.forEach((c, i) => c.style.display = i === 0 ? 'block' : 'none');
+        });
+    </script>
