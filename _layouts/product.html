@@ -12,14 +12,14 @@ layout: default
         <p class="title is-3">{{ page.title }}</p>
         <p class="subtitle is-3">{{ page.subtitle }}</p>
         <p class="title is-4 has-text-right">{{ page.price }}</p>
-        <div class="field has-addons is-4 has-text-right"> <!-- Seletor De Money-->
+        <div class="field has-addons has-text-right" style="width:100%;"> <!-- Seletor De Money-->
             <p class="control">
                 <span class="select">
                     <select>
-                        <option>R$ 100,00</option>
-                        <option>$18,00</option>
-                        <option>£12,00</option>
-                        <option>€16,00</option>
+                        <option>R${{ page.price-br }}</option>
+                        <option>${{ page.price-usa }}</option>
+                        <option>£{{ page.price-euro }}</option>
+                        <option>€{{ page.price-gbp }}</option>
                     </select>
                 </span>
             </p>
