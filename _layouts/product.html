@@ -13,7 +13,7 @@ layout: default
         <p class="subtitle is-3">{{ page.subtitle }}</p>
         <p class="title is-4 has-text-right">{{ page.price }}</p>
         {% if page.product_code %}
-            <p class="subtitle is-5 has-text-right">{{ page.product_code }}</p>
+            <p class="subtitle is-5 has-text-right">Código de Produto: {{ page.product_code }}</p>
         {% endif %}
 
         {% if page.rating %}
@@ -38,7 +38,8 @@ layout: default
             </div>
         {% endif %}
 
-        <a class="button is-success is-medium" href="/buy">
+        <br>
+        <a class="button is-5 is-success is-medium" href="/buy">
                 <span class="icon is-small">
                     <i class="far fa-credit-card"></i>
                 </span>
