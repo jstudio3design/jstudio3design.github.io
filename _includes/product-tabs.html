@@ -24,10 +24,11 @@
     </div>
     <!-- -->
     <div id="nfotec">
+    <br>
       {% for secao in dados %}
         {% unless secao[0] == "description" %}
           <h4>{{ secao[0] | capitalize }}</h4>
-          <table class="table">
+          <table class="table is-fullwidth is-bordered">
             <tbody>
               {% for campo in secao[1] %}
                 <tr>
