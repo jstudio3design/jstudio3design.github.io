@@ -38,9 +38,9 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
 <!--   <table class="table">
       <thead>
         <tr>
-          <th><abbr title="Geral">Geral          
-    </div>-->
+          <th><abbr title="Geral">Geral-->          
   </div>
+</div>
 
 ### Galeria
 
@@ -62,6 +62,7 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
     </span>
   </p>
 </div>
+
 
 <!--<div class="tec" id="tab-content">
   <div id="engine">
