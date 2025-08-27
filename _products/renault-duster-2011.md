@@ -50,6 +50,19 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
 ![Engine](/img/products/duster2011-lp/image3.png)
 ![Wheel](/img/products/duster2011-lp/image4.png)
 
+<div class="field has-addons">
+  <p class="control">
+    <span class="select">
+      <select>
+        <option>R$ 100,00</option>
+        <option>$18,00</option>
+        <option>£12,00</option>
+        <option>€16,00</option>
+      </select>
+    </span>
+  </p>
+</div>
+
 <!--<div class="tec" id="tab-content">
   <div id="engine">
     <br>
