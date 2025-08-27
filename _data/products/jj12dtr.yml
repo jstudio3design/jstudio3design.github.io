@@ -1,3 +1,23 @@
 ---
 description: Dacia Duster é um crossover subcompacto produzido e comercializado em conjunto pela fabricante francesa Renault e sua subsidiária romena Dacia desde 2010. Na América Latina, Rússia, Ucrânia , Ásia, Oriente Médio, África do Sul, Austrália e Nova Zelândia é comercializado como Renault Duster. Foi introduzido em março de 2010 e é o terceiro modelo da marca Dacia baseado na plataforma B0, depois do Sandero.
+geral:
+  ano/modelo: "2011"
+  lancamento: Outubro, 2011
+  plataforma: B0
+medidas:
+  comprimento: 4.315 mm
+  largura: 1.822 mm
+  altura: 1.690 mm
+  entre-eixos: 2.673 mm
+  altura-solo: 210 mm
+transmissao:
+  tracao: Dianteira, 4x4
+  cambio: Manual 6 Velocidades, Automático 4 Velocidades
+capacidade:
+  capacidade: 493 Kg
+  peso: Entre 1.202 Kg e 1353 Kg (Varia conforme motor/modelo)
+  porta-malas: 475 L
+  tanque: 50 L
+motor:
+  motor: K4M 696 (1.6) F4R (2.0)
 ---
