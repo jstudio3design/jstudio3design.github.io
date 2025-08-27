@@ -4,7 +4,7 @@ subtitle: Product 1 tagline here
 description: This is a product description
 product_code: JJ12DTR
 layout: product
-image: 
+image: /img/products/duster2011-lp/image.png
 price: R$100,00
 features:
     - label: Low-poly
@@ -35,26 +35,22 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
     <p>Dacia Duster é um crossover subcompacto produzido e comercializado em conjunto pela fabricante francesa Renault e sua subsidiária romena Dacia desde 2010. Na América Latina, Rússia, Ucrânia , Ásia, Oriente Médio, África do Sul, Austrália e Nova Zelândia é comercializado como Renault Duster. Foi introduzido em março de 2010 e é o terceiro modelo da marca Dacia baseado na plataforma B0, depois do Sandero.</p>
   </div>
   <div id="nfotec">
-    <div class="tabs is-centered is-fullwidth is-boxed">
-      <ul>
-        <li data-target="engine">
-          <a>Motorização</a>
-        </li>
-        <li data-target="dimenss">
-          <a>Dimensões</a>
-        </li>
-      </ul>
-    </div>
+<!--   <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="Geral">Geral          
+    </div>-->
   </div>
-</div><br>
 
 ### Galeria
 
-![FrontDuster]()
-![BackDuster]()
-![]()
+![Front](/img/products/duster2011-lp/image.png)
+![Back](/img/products/duster2011-lp/image1.png)
+![Underneath](/img/products/duster2011-lp/image2.png)
+![Engine](/img/products/duster2011-lp/image3.png)
+![Wheel](/img/products/duster2011-lp/image4.png)
 
-<div class="tec" id="tab-content">
+<!--<div class="tec" id="tab-content">
   <div id="engine">
     <br>
     <p>Plataforma: B0</p>
@@ -77,4 +73,5 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
     <p>Entre-eixos: 2.673 mm</p>
     <p>Altura em relação ao solo: 210 mm</p>
   </div>
-</div>s
+</div>
+-->
