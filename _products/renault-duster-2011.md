@@ -10,17 +10,19 @@ price-usa: "18,00"
 price-euro: "12,00"
 price-gbp: "16,00"
 features:
-    - label: Low-poly
-      icon:
-    - label: Detalhado
-      icon:
-    - label: Interior
-      icon:
+  - label: Low-poly
+    icon:
+  - label: Detalhado
+    icon:
+  - label: Interior
+    icon:
 rating: 5
 hide_hero: true
 tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,Crossover,SUV]
 ---
 
+{% include product-tabs.html %}
+<!--
 <div class="tabs is-centered is-fullwidth is-toggle">
   <ul>
     <li data-target="descrp">
@@ -41,9 +43,9 @@ tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,C
 <!--   <table class="table">
       <thead>
         <tr>
-          <th><abbr title="Geral">Geral-->          
+          <th><abbr title="Geral">Geral          
   </div>
-</div>
+</div>-->
 
 ### Galeria
 

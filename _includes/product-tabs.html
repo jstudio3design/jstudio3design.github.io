@@ -1,0 +1,30 @@
+<div class="tabs is-centered is-fullwidth is-toggle">
+  <ul>
+    <li data-target="descrp">
+      <a>Descrição</a>
+    </li>
+    <li data-target="nfotec">
+      <a>Info. Técnicas</a>
+    </li>
+  </ul>
+</div>
+
+<div class="info" id="tab-content">
+    <div id="descrp">
+        <br>
+        {% assign codigo = page.product_code | downcase %}
+        {% assign dados = site.data.products[codigo] %}
+        {% if dados and dados.description %}
+          <p>{{ dados.description }}</p>
+        {% else %}
+          <p>Descrição não encontrada.</p>
+        {% endif %}
+    </div>
+    <!-- -->
+    <div id="nfotec">
+    <table class="table">
+        <thead>
+            <tr>
+                <th><abbr title="Geral">Geral-->          
+    </div>
+</div>
