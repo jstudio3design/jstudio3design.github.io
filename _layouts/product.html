@@ -37,14 +37,15 @@ layout: default
                 {% endfor %}
             </div>
         {% endif %}
-    </div>
 
-    <button class="button is-link is-medium is-outlined">
-        <span class="icon is-small">
-            <i class="fas fa-check"></i>
-        </span>
-        <span>Comprar<span>
-    </button>
+        <a class="button is-success is-medium" href="/buy">
+                <span class="icon is-small">
+                    <i class="far fa-credit-card"></i>
+                </span>
+                <span>Comprar<span>
+            </a>
+
+    </div>
 
     <div class="column is-12">
         <p class="title is-4"> </p><br>
@@ -68,3 +69,29 @@ layout: default
     {% endfor %}
 
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.tabs li');
+  const contents = document.querySelectorAll('#tab-content > div');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // Remove 'is-active' de todas as tabs
+      tabs.forEach(t => t.classList.remove('is-active'));
+      // Adiciona 'is-active' à tab clicada
+      tab.classList.add('is-active');
+
+      // Esconde todos os conteúdos
+      contents.forEach(c => c.style.display = 'none');
+      // Mostra o conteúdo relacionado
+      const target = tab.getAttribute('data-target');
+      document.getElementById(target).style.display = 'block';
+    });
+  });
+
+  // Inicializa: mostra só a primeira aba
+  tabs[0].classList.add('is-active');
+  contents.forEach((c, i) => c.style.display = i === 0 ? 'block' : 'none');
+});
+</script>
