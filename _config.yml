@@ -46,6 +46,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - jstudio3design
 
 livereload: true
 
@@ -84,7 +85,7 @@ collections:
   products: 
     output: true
     layout: product
-    image: https://picsum.photos/id/16/800/600
+    image: 
     show_sidebar: false
 
 social:
