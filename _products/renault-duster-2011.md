@@ -6,9 +6,9 @@ product_code: JJ12DTR
 layout: product
 image: /img/products/duster2011-lp/image.png
 price-br: "100,00"
-price-usa: "18,00"
-price-euro: "12,00"
-price-gbp: "16,00"
+price-usa: "20,00"
+price-euro: "18,00"
+price-gbp: "14,00"
 features:
   - label: Low-poly
     icon:
@@ -19,6 +19,12 @@ features:
 rating: 5
 hide_hero: true
 tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,Crossover,SUV]
+carousels:
+  - images: 
+    - image: /img/products/duster2011-lp/image.png
+    - image: /img/products/duster2011-lp/image1.png
+    - image: /img/products/duster2011-lp/image2.png
+    - image: /img/products/duster2011-lp/image3.png
 ---
 
 {% include product-tabs.html %}

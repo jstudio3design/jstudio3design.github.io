@@ -69,6 +69,14 @@ layout: default
         </div>
     </div>
 
+    <div class="tags my-4">
+        {% for tag in page.tags %}
+        {% include tag.html tag=tag %}
+        {% endfor %}
+    </div>
+
+    {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
     {% if site.data.reviews[page.product_code] %}
     <div class="column is-12">
         <p class="title is-4">Reviews</p>
