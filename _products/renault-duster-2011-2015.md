@@ -2,7 +2,7 @@
 title: Renault Duster 2011-2015
 subtitle: "O SUV para todos os caminhos."
 description: Renault Duster 2011-2015 3D Low-Poly
-product_code: JJ12DTR
+product_code: JJ11DTR
 layout: product
 image: /img/products/duster2011-lp/image.png
 price-br: "100,00"
