@@ -3,7 +3,7 @@ theme: bulma-clean-theme
 lang: pt
 title: J. Studio Design
 tagline:
-email:
+email: 
 description: >
   J. Studio Design é um estúdio de design focado em criar experiências digitais únicas e impactantes. 
   Nossa missão é transformar ideias em realidade, oferecendo soluções criativas e inovadoras para nossos clientes.
@@ -13,7 +13,7 @@ permalink: pretty
 #favicon: /path/to/favicon.png
 gh_sponsor: 
 #hide_share_buttons: true
-#theme_color: '#6C1DD5'
+theme_color: '#6C1DD5'
 fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 force_theme: dark
