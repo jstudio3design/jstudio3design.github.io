@@ -28,11 +28,3 @@ carousels:
 ---
 
 {% include product-tabs.html %}
-
-### Galeria
-
-![Front](/img/products/duster2011-lp/image.png)
-![Back](/img/products/duster2011-lp/image1.png)
-![Underneath](/img/products/duster2011-lp/image2.png)
-![Engine](/img/products/duster2011-lp/image3.png)
-![Wheel](/img/products/duster2011-lp/image4.png)
