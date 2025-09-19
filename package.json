@@ -3,13 +3,14 @@
     "description": "This is a clean and simple Jekyll Theme built with the Bulma framework, providing a modern looking site to start with.",
     "version": "1.0.0",
     "main": "index.js",
-    "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "chrisrhymes",
     "license": "MIT",
     "dependencies": {
+        "@vercel/analytics": "^1.5.0",
+        "@vercel/speed-insights": "^1.2.0",
         "bulma": "^1.0"
     }
 }
