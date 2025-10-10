@@ -62,12 +62,16 @@ layout: default
         </a>
     </div>
 
+    <!-- Tags -->
+    <div class="tags my-4">
+        {% for tag in page.tags %}
+        {% include tag.html tag=tag %}
+        {% endfor %}
+    </div>
 
     <br>
     <h3 class="title is-4">Galeria</h3>
     <br>
-    {% include carousel.html height="50" unit="%" duration="15"%}
-
 
     <div class="column is-12">
         <p class="title is-4"> </p><br>
@@ -84,12 +88,6 @@ layout: default
         {% endfor %}
     </div>
     {% endif %}
-    <!-- Tags -->
-    <div class="tags my-4">
-        {% for tag in page.tags %}
-        {% include tag.html tag=tag %}
-        {% endfor %}
-    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
