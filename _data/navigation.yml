@@ -11,6 +11,8 @@
       link: /blog/
     - name: Loja
       link: /products/
+- name: Sobre Nós
+  link: /about/
 #    - name: Landing Page With Callouts
 #      link: /landing/
 #    - name: Promo Page

@@ -20,11 +20,8 @@ force_theme: dark
 paginate: 10
 paginate_path: "/blog/page:num"
 
-# Disqus Comments
 disqus:
-  # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  # shortname: my_disqus_shortname
   shortname: 
 
 
@@ -56,7 +53,7 @@ sass:
     # - node_modules
 
 #google_analytics: UA-code-here
-cookie_policy: /cookie-policy/
+#cookie_policy: /cookie-policy/
 
 defaults:
   -
@@ -78,7 +75,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
-footer_menu: example_footer_menu
+footer_menu: footer_menu
 
 collections:
   products: 

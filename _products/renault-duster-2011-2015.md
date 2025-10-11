@@ -19,14 +19,14 @@ features:
 rating: 5
 hide_hero: true
 tags: [Carros,Low-Poly,Francês,Romeno,Europeu,Brasileiro,Segmento C,Compactos,Crossover,SUV]
-carousels:
-  - images: 
-    - image: /img/products/duster2011-lp/duster-front-side.png
-    - image: /img/products/duster2011-lp/duster-front.png
-    - image: /img/products/duster2011-lp/duster-engine.png
-    - image: /img/products/duster2011-lp/duster-back.png
-    - image: /img/products/duster2011-lp/duster-wheel.png
-    - image: /img/products/duster2011-lp/duster-under.png
 ---
+### Galeria
+
+![Front-Side](/img/products/duster2011-lp/duster-front-side.png)
+![Front](/img/products/duster2011-lp/duster-front.png)
+![Engine](/img/products/duster2011-lp/duster-engine.png)
+![Back](/img/products/duster2011-lp/duster-back.png)
+![Wheel](/img/products/duster2011-lp/duster-wheel.png)
+![Under](/img/products/duster2011-lp/duster-under.png)
 
 {% include product-tabs.html %}

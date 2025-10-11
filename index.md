@@ -16,6 +16,7 @@ hero_height: is-small
 
 Acesse os principais links aqui.
 
+* [Loja](/products)
 * [Postagens](/blog/)
 * [Todos os Links](/links/)
 * [Galeria](/gallery/)
