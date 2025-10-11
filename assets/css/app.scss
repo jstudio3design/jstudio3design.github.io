@@ -2,3 +2,13 @@
 ---
 $primary: #550a6e;
 @import "main";
+
+.container-imagens {
+    display: flex; /* Coloca os itens (imagens) lado a lado */
+    justify-content: space-between; /* Adiciona espaço entre as imagens */
+    align-items: center; /* Alinha as imagens verticalmente ao centro */
+}
+
+.container-imagens img {
+    max-width: 100%; /* Garante que as imagens não fiquem maiores que o contêiner */
+}

@@ -1,11 +1,11 @@
 # Site Settings
 theme: bulma-clean-theme
 lang: pt
-title: J. Studio Design
+title: J.J Studio Design
 tagline:
 email: 
 description: >
-  J. Studio Design é um estúdio de design focado em criar experiências digitais únicas e impactantes. 
+  J.J Studio Design é um estúdio de design focado em criar experiências digitais únicas e impactantes. 
   Nossa missão é transformar ideias em realidade, oferecendo soluções criativas e inovadoras para nossos clientes.
 baseurl: ""
 url: "https://jstudio3design.github.io"
@@ -70,7 +70,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "J. Studio"
+      author: "J.J Studio"
       layout: post
       image:
       show_sidebar: true
@@ -88,6 +88,6 @@ collections:
     show_sidebar: false
 
 social:
-  discord: https://discord.gg/
+  discord: https://discord.gg/hrDm7K9bcR
   youtube: https://www.youtube.com/@
   
