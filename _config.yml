@@ -1,14 +1,13 @@
 # Site Settings
 theme: bulma-clean-theme
 lang: pt
-title: J.J Studio Design
+title: Eclipsta Studio
 tagline:
 email: 
 description: >
-  J.J Studio Design é um estúdio de design focado em criar experiências digitais únicas e impactantes. 
-  Nossa missão é transformar ideias em realidade, oferecendo soluções criativas e inovadoras para nossos clientes.
+  Onde a luz encontra a forma.
 baseurl: ""
-url: "https://jstudio3design.github.io"
+url: "https://"
 permalink: pretty
 #favicon: /path/to/favicon.png
 gh_sponsor: 
@@ -67,7 +66,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "J.J Studio"
+      author: "Eclipsta Studio"
       layout: post
       image:
       show_sidebar: true
