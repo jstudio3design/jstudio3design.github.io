@@ -24,7 +24,7 @@ $primary: #550a6e;
 /* ultra-wide: 5 por linha em >= 2560px (subtrai 4 gaps = 80px) */
 @media (min-width: 2560px) {
   .container-imagens img {
-    flex: 0 0 calc((100% - 80px) / 5);
+    flex: 0 0 calc((100% -80px) / 5);
   }
 }
 
