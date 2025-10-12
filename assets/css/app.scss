@@ -13,7 +13,7 @@ $primary: #000000ff;
 
 /* padrão: 3 por linha (subtrai 2 gaps = 40px) */
 .container-imagens img {
-    flex: 0 0 calc((100% -20px) / 2);
+    flex: 0 0 calc((100% - 20px) / 2);
     width: 100%;
     max-width: 100%;
     height: auto;
