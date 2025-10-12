@@ -4,18 +4,43 @@ $primary: #550a6e;
 @import "main";
 
 .container-imagens {
-    display: flex; /* Coloca os itens (imagens) lado a lado */
-    justify-content: space-between; /* Adiciona espaço entre as imagens */
-    align-items: center; /* Alinha as imagens verticalmente ao centro */
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se necessário */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+/* padrão: 3 por linha (subtrai 2 gaps = 40px) */
 .container-imagens img {
-    width: 30%;
-    max-width: 100%; /* Garante que as imagens não fiquem maiores que o contêiner */
-    height: auto; /* Mantém a proporção original das imagens */
-    flex: 1; /* Faz com que as imagens ocupem o mesmo espaço */
-    margin: 0 10px; /* Adiciona margem entre as imagens */
-    border-radius: 8px; /* Adiciona cantos arredondados às imagens */
-    flex-basis: 30%; /* Define a largura base das imagens */
+    flex: 0 0 calc((100% -20px) / 2);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+}
+
+/* ultra-wide: 5 por linha em >= 2560px (subtrai 4 gaps = 80px) */
+@media (min-width: 2560px) {
+  .container-imagens img {
+    flex: 0 0 calc((100% - 80px) / 5);
+  }
+}
+
+/* tablets e telas médias: duas colunas */
+@media (max-width: 1440px) {
+  .container-imagens img {
+    flex: 1 1 40%;
+  }
+}
+
+/* celulares: uma coluna */
+@media (max-width: 480px) {
+  .container-imagens {
+    justify-content: center;
+  }
+  .container-imagens img {
+    flex: 1 1 100%;
+  }
 }
