@@ -2,9 +2,8 @@
 title: Início
 subtitle: Bem-vindo(a) ao meu site.
 layout: page
-#callouts:
 show_sidebar: false
-hero_height: is-small
+hide_hero: true
 ---
 
 <div class="container-imagens">

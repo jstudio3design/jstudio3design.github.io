@@ -1,6 +1,6 @@
 ---
 layout: links
-title: J.J Studio
+title: Eclipsta Studio
 subtitle: Todas as minhas redes sociais.
 avatar: 
 avatar_alt: 
@@ -16,5 +16,7 @@ link_sections:
           link: https://libertycity.net/user/Johnnie
           image: https://libertycity.net/uploads/fotos/lc_1697920756.jpg?1697908520
 ---
+
+## Quem sou eu? 
 
 Cristão, Designer 3D, Web-Designer, Designer Gráfico, Desenvolvedor de Jogos, Programador, Sonoplasta, Modder de GTA, YouTuber, Músico.
