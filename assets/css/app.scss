@@ -1,51 +1,9 @@
 ---
 ---
-$primary: #000000ff;
+$primary: rgb(0, 0, 0);
+$secondary: rgb(125, 0, 150);
+$background: rgb(15, 15, 15);
+$success: rgb(66, 215, 66)
+$warning: rgb(255, 51, 51);
+$text: rgb(255, 255, 255);
 @import "main";
-
-.container-imagens {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* aplicar flex aos filhos diretos (li, a, figure, div, ...) */
-.container-imagens > * {
-  box-sizing: border-box;
-  flex: 0 0 calc((100% - 20px) / 2); /* padrão: 2 por linha */
-}
-
-/* imagem ocupa todo o espaço do item flex */
-.container-imagens img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-/* ultra-wide: 5 por linha em >= 2560px (subtrai 4 gaps = 80px) */
-@media (min-width: 2560px) {
-  .container-imagens > * {
-    flex: 0 0 calc((100% - 80px) / 5);
-  }
-}
-
-/* tablets e telas médias: duas colunas se quiser ajustar, exemplo abaixo */
-/* (opcional: remova/ajuste breakpoint conforme necessidade) */
-@media (max-width: 1440px) and (min-width: 481px) {
-  .container-imagens > * {
-    flex: 0 0 calc((100% - 20px) / 2);
-  }
-}
-
-/* celulares: uma coluna */
-@media (max-width: 480px) {
-  .container-imagens {
-    justify-content: center;
-  }
-  .container-imagens > * {
-    flex: 0 0 100%;
-  }
-}
