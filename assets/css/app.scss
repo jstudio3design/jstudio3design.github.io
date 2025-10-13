@@ -7,3 +7,18 @@ $success: rgb(66, 215, 66)
 $warning: rgb(255, 51, 51);
 $text: rgb(255, 255, 255);
 @import "main";
+
+.index-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.index-imagens img {
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    flex-basis: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

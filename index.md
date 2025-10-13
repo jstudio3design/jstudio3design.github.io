@@ -6,7 +6,7 @@ show_sidebar: false
 hide_hero: true
 ---
 
-<div class="container-imagens">
+<div class="index-imagens">
     <img src="img/products/duster2011-lp/duster-front-side.png" alt="Duster">
     <img src="img/products/duster2011-lp/duster-wheel.png" alt="Wheel">
 </div>
