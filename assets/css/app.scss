@@ -1,37 +1,42 @@
----
----
+/* ---
+--- */
 $primary: #000000ff;
 @import "main";
 
 .container-imagens {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/* padrão: 3 por linha (subtrai 2 gaps = 40px) */
+/* aplicar flex aos filhos diretos (li, a, figure, div, ...) */
+.container-imagens > * {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 20px) / 2); /* padrão: 2 por linha */
+}
+
+/* imagem ocupa todo o espaço do item flex */
 .container-imagens img {
-    flex: 0 0 calc((100% - 20px) / 2);
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 /* ultra-wide: 5 por linha em >= 2560px (subtrai 4 gaps = 80px) */
 @media (min-width: 2560px) {
-  .container-imagens img {
+  .container-imagens > * {
     flex: 0 0 calc((100% - 80px) / 5);
   }
 }
 
-/* tablets e telas médias: duas colunas */
-@media (max-width: 1440px) {
-  .container-imagens img {
-    flex: 1 1 40%;
+/* tablets e telas médias: duas colunas se quiser ajustar, exemplo abaixo */
+/* (opcional: remova/ajuste breakpoint conforme necessidade) */
+@media (max-width: 1440px) and (min-width: 481px) {
+  .container-imagens > * {
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 }
 
@@ -40,7 +45,7 @@ $primary: #000000ff;
   .container-imagens {
     justify-content: center;
   }
-  .container-imagens img {
-    flex: 1 1 100%;
+  .container-imagens > * {
+    flex: 0 0 100%;
   }
 }
