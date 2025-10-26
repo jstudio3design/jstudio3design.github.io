@@ -1,5 +1,5 @@
 ---
-title: Início
+title:
 subtitle: Bem-vindo(a) ao meu site.
 layout: page
 show_sidebar: false
@@ -10,6 +10,15 @@ hide_hero: true
     <img src="img/products/duster2011-lp/duster-front-side.png" alt="Duster">
     <img src="img/products/duster2011-lp/duster-wheel.png" alt="Wheel">
 </div>
+
+<!--# Últimas Novidades
+Cartão de Posts Horizontal
+Confira todas as postagens-->
+
+<!-- Eclipsta Studios - Sobre a empresa-->
+
+<!-- Nossos trabalhos
+Confira nossa loja-->
 
 # Sentido-se perdido?
 
