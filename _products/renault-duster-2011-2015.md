@@ -5,10 +5,10 @@ description: Renault Duster 2011-2015 3D Low-Poly
 product_code: JJ11DTR
 layout: product
 image: /img/products/duster2011-lp/duster.png
-price-br: "100,00"
-price-usa: "20,00"
-price-euro: "18,00"
-price-gbp: "14,00"
+price-br: "200,00"
+price-usa: "40,00"
+price-euro: "36,00"
+price-gbp: "28,00"
 features:
   - label: Low-poly
     icon:
