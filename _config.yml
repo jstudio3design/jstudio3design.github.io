@@ -9,7 +9,7 @@ description: >
 baseurl: ""
 url: "https://"
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: "/img/eclipsta.svg"
 gh_sponsor: 
 #hide_share_buttons: true
 fixed_navbar: top
