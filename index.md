@@ -21,7 +21,7 @@ Confira todas as postagens-->
 Confira nossa loja-->
 # Nossos Trabalhos
 
-{% include image-card.html folder="img/cards %}
+{% include image-card.html folder="img/cards" %}
 
 # Sentido-se perdido?
 
