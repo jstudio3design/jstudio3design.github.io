@@ -1,6 +1,4 @@
----
----
-$primary: rgb(0, 0, 0);
+--- --- $primary: rgb(0, 0, 0);
 $secondary: rgb(125, 0, 150);
 $bulma-body-background-color: rgb(18, 18, 18);
 $body-background-color: rgb(18, 18, 18);
@@ -46,14 +44,4 @@ figure.header-logo img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-.index-imagens img {
-    display: block;
-    width: 30%;
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 300px;
-    border-radius: 8px;
-    object-fit: contain;
 }
