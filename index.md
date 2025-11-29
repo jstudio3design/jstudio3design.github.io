@@ -3,7 +3,6 @@ title:
 subtitle:
 layout: page
 show_sidebar: false
-hero_image: /
 hero_height: is-fullwidth
 ---
 
