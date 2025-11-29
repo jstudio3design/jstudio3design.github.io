@@ -26,8 +26,6 @@ hero_height: is-fullwidth
 <!--# Últimas Novidades
 Cartão de Posts Horizontal
 Confira todas as postagens-->
-# Últimas novidades
-{% include post-card-horizontal.html %}
 
 <!-- Eclipsta Studios - Sobre a empresa-->
 
