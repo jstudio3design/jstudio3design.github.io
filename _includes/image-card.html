@@ -61,9 +61,11 @@
         .ic-item img {
             display: block;
             width: 100%;
-            height: 25rem;
+            /* diminui dinamicamente com o viewport, nunca abaixo de 160px */
+            height: clamp(160px, 20vw, 25rem);
             object-fit: cover;
             border-radius: 1rem;
+            transition: height .25s ease;
         }
 
         /* Desktop maior mostra 3 por vez */
@@ -74,7 +76,7 @@
         }
 
         /* Mobile pequeno mostra 2 por vez (já padrão), abaixo 480 mostra 1 por vez */
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             .ic-item {
                 flex: 0 0 100%;
             }
@@ -84,8 +86,9 @@
                 font-size: 18px;
             }
 
+            /* mantém clamp em telas pequenas (prefere percentuais do viewport) */
             .ic-item img {
-                height: 160px;
+                height: clamp(160px, 36vw, 25rem);
             }
         }
     </style>
@@ -105,7 +108,7 @@
                 // calcula quantos itens cabem no viewport com base em width dos itens
                 const viewportWidth = root.querySelector('.ic-viewport').clientWidth;
                 if (window.matchMedia('(min-width:2560px) and (min-height: 1080px)').matches) return 3;
-                if (window.matchMedia('(max-width:480px)').matches) return 1;
+                if (window.matchMedia('(max-width:700px)').matches) return 1;
                 return 2;
             }
 
