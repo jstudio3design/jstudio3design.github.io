@@ -1,0 +1,147 @@
+<div class="image-card-wrapper">
+    <!-- Parâmetro opcional: include.folder (padrão: img/cards) -->
+    {% assign folder = include.folder | default: "img/cards" %}
+    {% assign images = site.static_files | where_exp: "f", "f.path contains folder" | sort: "name" %}
+
+    <div class="image-card" data-folder="{{ folder }}">
+        <button class="ic-arrow ic-left" aria-label="Anterior" type="button">‹</button>
+
+        <div class="ic-viewport">
+            <div class="ic-track">
+                {% for img in images %}
+                <div class="ic-item">
+                    <img src="{{ img.path | relative_url }}" alt="{{ img.name }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <button class="ic-arrow ic-right" aria-label="Próximo" type="button">›</button>
+    </div>
+
+    <style>
+        /* Estilos localizados para o componente */
+        .image-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .ic-arrow {
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+
+        .ic-viewport {
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .ic-track {
+            display: flex;
+            transition: transform .35s ease;
+            gap: 12px;
+            padding: 6px 0;
+        }
+
+        .ic-item {
+            flex: 0 0 calc(50% - 6px);
+            /* mostra 2 por vez por padrão */
+            box-sizing: border-box;
+        }
+
+        .ic-item img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Desktop maior mostra 3 por vez */
+        @media (min-width: 900px) {
+            .ic-item {
+                flex: 0 0 calc((100% - 24px) / 3);
+            }
+        }
+
+        /* Mobile pequeno mostra 2 por vez (já padrão), abaixo 480 mostra 1 por vez */
+        @media (max-width: 480px) {
+            .ic-item {
+                flex: 0 0 100%;
+            }
+
+            .ic-arrow {
+                padding: 6px 8px;
+                font-size: 18px;
+            }
+
+            .ic-item img {
+                height: 160px;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            const root = document.currentScript ? document.currentScript.parentElement : document.querySelector('.image-card');
+            if (!root) return;
+            const track = root.querySelector('.ic-track');
+            const items = Array.from(root.querySelectorAll('.ic-item'));
+            const btnPrev = root.querySelector('.ic-left');
+            const btnNext = root.querySelector('.ic-right');
+
+            let index = 0;
+
+            function visibleCount() {
+                // calcula quantos itens cabem no viewport com base em width dos itens
+                const viewportWidth = root.querySelector('.ic-viewport').clientWidth;
+                if (window.matchMedia('(min-width:900px)').matches) return 3;
+                if (window.matchMedia('(max-width:480px)').matches) return 1;
+                return 2;
+            }
+
+            function clampIndex(i) {
+                const maxStart = Math.max(0, items.length - visibleCount());
+                return Math.min(Math.max(0, i), maxStart);
+            }
+
+            function update() {
+                const vc = visibleCount();
+                const itemWidth = items[0] ? items[0].getBoundingClientRect().width : 0;
+                const gap = parseFloat(getComputedStyle(track).gap) || 12;
+                // deslocamento em px: (itemWidth + gap) * index
+                const offset = (itemWidth + gap) * index;
+                track.style.transform = `translateX(-${offset}px)`;
+                btnPrev.disabled = index === 0;
+                btnNext.disabled = index >= Math.max(0, items.length - vc);
+            }
+
+            btnPrev.addEventListener('click', () => {
+                index = clampIndex(index - 1);
+                update();
+            });
+            btnNext.addEventListener('click', () => {
+                index = clampIndex(index + 1);
+                update();
+            });
+
+            window.addEventListener('resize', () => {
+                index = clampIndex(index);
+                update();
+            });
+
+            // inicialização
+            // se houver poucos itens, desativa botões
+            update();
+        })();
+    </script>
+</div>

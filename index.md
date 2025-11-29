@@ -19,6 +19,9 @@ Confira todas as postagens-->
 
 <!-- Nossos trabalhos
 Confira nossa loja-->
+# Nossos Trabalhos
+
+{% include image-card.html folder="img/cards %}
 
 # Sentido-se perdido?
 
