@@ -1,6 +1,5 @@
 # Site Settings
 theme: bulma-clean-theme
-lang: pt
 title: Eclipsta Studio
 tagline:
 email: 
@@ -15,6 +14,11 @@ gh_sponsor:
 fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 force_theme: dark
+
+langs:
+  - pt
+  - en
+lang: pt
 
 paginate: 10
 paginate_path: "/blog/page:num"

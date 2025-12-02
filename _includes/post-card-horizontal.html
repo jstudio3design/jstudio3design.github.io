@@ -1,3 +1,5 @@
+{% assign t = site.data.language[site.lang] %}
+
 <div class="post-cards-wrapper">
     <div class="post-carousel">
         <button class="pc-arrow pc-left" aria-label="Posts anteriores" type="button">‹</button>
@@ -5,46 +7,60 @@
         <div class="pc-viewport">
             <div class="pc-track">
                 {% for post in site.posts limit: 10 %}
-                <div class="pc-item">
-                    <div class="card">
-                        {% if post.image %}
-                        <div class="card-image">
-                            <img src="{{ post.image }}" alt="{{ post.title }}">
-                        </div>
-                        {% else %}
-                        <header class="card-header">
-                            <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                        </header>
-                        {% endif %}
-                        <div class="card-content">
-                            <div class="content">
-                                {% if post.image %}
-                                <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                                {% endif %}
-                                {% if post.summary %}
-                                {{ post.summary | markdownify }}
-                                {% else %}
-                                <p>{{ post.excerpt }}</p>
-                                {% endif %}
+                    <div class="pc-item">
+                        <div class="card">
+                            {% if post.image %}
+                                <div class="card-image">
+                                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                                </div>
+                            {% else %}
+                                <header class="card-header">
+                                    <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">
+                                        {{- post.title -}}
+                                    </a>
+                                </header>
+                            {% endif %}
+                            <div class="card-content">
+                                <div class="content">
+                                    {% if post.image %}
+                                        <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">
+                                            {{- post.title -}}
+                                        </a>
+                                    {% endif %}
+                                    {% if post.summary %}
+                                        {{ post.summary | markdownify }}
+                                    {% else %}
+                                        <p>{{ post.excerpt }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="has-text-centered">
+                                    <a href="{{ site.baseurl }}{{ post.url }}" class="button is-secundary">
+                                        {{ t.read_more }}
+                                        <span
+                                            class="is-sr-only"
+                                        >
+                                            about {{ post.title -}}
+                                        </span></a
+                                    >
+                                </div>
                             </div>
-                            <div class="has-text-centered">
-                                <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more <span
-                                        class="is-sr-only"> about {{ post.title }}</span></a>
-                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    {{ t.published }}
+                                    {% include format-date.html date=post.date t=t %}
+                                    <!-- Data -->
+                                </p>
+                            </footer>
                         </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item">Published: {{ post.date | date: '%b %-d, %Y' }}</p>
-                        </footer>
                     </div>
-                </div>
                 {% endfor %}
 
                 <!-- Botão para ver todos os posts -->
                 <div class="pc-item pc-view-all">
                     <div class="view-all-card">
                         <div class="view-all-content">
-                            <h3>Ver Todos</h3>
-                            <p>Confira todos os posts</p>
+                            <h3>{{ t.view_all }}</h3>
+                            <p>{{ t.check_all_posts }}</p>
                             <a href="{{ site.baseurl }}/blog/" class="button is-primary">Blog</a>
                         </div>
                     </div>
@@ -93,7 +109,7 @@
 
         .pc-track {
             display: flex;
-            transition: transform .35s ease;
+            transition: transform 0.35s ease;
             gap: 16px;
             padding: 8px 0;
         }
@@ -102,6 +118,7 @@
             flex: 0 0 calc(25% - 12px);
             /* mostra 4 posts por vez por padrão */
             box-sizing: border-box;
+            border-radius: 1rem;
         }
 
         .pc-item .card {
@@ -117,7 +134,7 @@
         .view-all-card {
             height: 100%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 6px;
+            border-radius: 1rem;
             padding: 2rem;
             display: flex;
             align-items: center;
@@ -178,7 +195,9 @@
 
     <script>
         (function () {
-            const root = document.currentScript ? document.currentScript.parentElement : document.querySelector('.post-carousel');
+            const root = document.currentScript
+                ? document.currentScript.parentElement
+                : document.querySelector('.post-carousel');
             if (!root) return;
             const track = root.querySelector('.pc-track');
             const items = Array.from(root.querySelectorAll('.pc-item'));

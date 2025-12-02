@@ -1,0 +1,9 @@
+{% comment %} recebe: include.date (data), include.t (objeto de traduções) {% endcomment %}
+{% assign day = include.date | date: '%d' %}
+{% assign month_key = include.date | date: '%m' %}
+{% assign year = include.date | date: '%Y' %}
+{% assign weekday = include.date | date: '%A' %}
+{% assign month_name = include.t.months[month_key] | default: include.date | date: '%b' %}
+{% assign day_name = include.t.days[weekday] | default: weekday %}
+
+{{ day_name }}, {{ day }} de {{ month_name }} de {{ year }}
