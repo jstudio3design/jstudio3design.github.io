@@ -1,38 +1,37 @@
 <!-- _includes/language-selector.html -->
+{% assign langs = site.data.language | keys %}
+
 <div class="language-selector">
     <label for="lang-select">{{ t.language | default: 'Language' }}:</label>
-    <select id="lang-select">
-        <option
-            value="pt"
-            {% if site.lang == 'pt' %}
-                selected
-            {% endif %}
-        >
-            Português
-        </option>
-        <option
-            value="en"
-            {% if site.lang == 'en' %}
-                selected
-            {% endif %}
-        >
-            English
-        </option>
+    <select id="lang-select" onchange="changeLanguage(this.value)">
+        {% for lang in langs %}
+            <option
+                value="{{ lang }}"
+                {% if site.lang == lang %}
+                    selected
+                {% endif %}
+            >
+                {% case lang %}
+                    {% when 'pt' -%}
+                        Português
+                    {% when 'en' -%}
+                        English
+                    {% else -%}
+                        {{- lang }}
+                {% endcase %}
+            </option>
+        {% endfor %}
     </select>
 </div>
 
 <script>
-    document.getElementById('lang-select').addEventListener('change', function (e) {
-        localStorage.setItem('site-lang', e.target.value);
-        location.reload();
-    });
-
-    window.addEventListener('load', function () {
-        const savedLang = localStorage.getItem('site-lang');
-        if (savedLang) {
-            document.getElementById('lang-select').value = savedLang;
-        }
-    });
+    function changeLanguage(lang) {
+        const currentPath = window.location.pathname;
+        // Remove idioma antigo da URL se existir
+        const newPath = currentPath.replace(/\/(pt|en)\//, '/').replace(/^(\/pt|\/en)\//, '/');
+        // Adiciona novo idioma
+        window.location.href = '/' + lang + newPath;
+    }
 </script>
 
 <style>
