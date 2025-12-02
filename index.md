@@ -3,7 +3,7 @@ title:
 subtitle:
 layout: page
 show_sidebar: false
-hero_height: is-fullwidth
+hero_height: is-big
 ---
 
 <!--<div class="index-banner">

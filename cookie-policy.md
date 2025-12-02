@@ -1,6 +1,7 @@
 ---
 title: Política de Cookies
 layout: page
+show_sidebar: false
 ---
 
 Política de Cookies

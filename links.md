@@ -1,6 +1,7 @@
 ---
 layout: links
 title: Eclipsta Studio
+show_sidebar: false
 subtitle: Todas as minhas redes sociais.
 avatar: 
 avatar_alt: 
