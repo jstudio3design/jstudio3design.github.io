@@ -3,7 +3,19 @@
 {% assign month_key = include.date | date: '%m' %}
 {% assign year = include.date | date: '%Y' %}
 {% assign weekday = include.date | date: '%A' %}
-{% assign month_name = include.t.months[month_key] | default: include.date | date: '%b' %}
-{% assign day_name = include.t.days[weekday] | default: weekday %}
+
+{% assign month_name = '' %}
+{% if include.t and include.t.months and include.t.months[month_key] %}
+    {% assign month_name = include.t.months[month_key] %}
+{% else %}
+    {% assign month_name = include.date | date: '%b' %}
+{% endif %}
+
+{% assign day_name = '' %}
+{% if include.t and include.t.days and include.t.days[weekday] %}
+    {% assign day_name = include.t.days[weekday] %}
+{% else %}
+    {% assign day_name = weekday %}
+{% endif %}
 
 {{ day_name }}, {{ day }} de {{ month_name }} de {{ year }}
