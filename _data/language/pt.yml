@@ -1,3 +1,4 @@
+language: 'Idioma'
 date_format: '%d de %B de %Y'
 read_more: 'Leia mais'
 published: 'Publicado:'

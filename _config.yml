@@ -18,7 +18,7 @@ force_theme: dark
 langs:
   - pt
   - en
-lang: pt
+lang: en
 
 paginate: 10
 paginate_path: "/blog/page:num"

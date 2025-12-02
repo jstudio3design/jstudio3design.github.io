@@ -1,21 +1,45 @@
 {% comment %} recebe: include.date (data), include.t (objeto de traduções) {% endcomment %}
+
+{% assign df = include.t.date_format | default: '%-d %b, %Y' %}
 {% assign day = include.date | date: '%d' %}
+{% assign day_nozero = include.date | date: '%-d' %}
 {% assign month_key = include.date | date: '%m' %}
 {% assign year = include.date | date: '%Y' %}
 {% assign weekday = include.date | date: '%A' %}
 
-{% assign month_name = '' %}
-{% if include.t and include.t.months and include.t.months[month_key] %}
-    {% assign month_name = include.t.months[month_key] %}
-{% else %}
-    {% assign month_name = include.date | date: '%b' %}
+{% assign month_name = include.t.months[month_key] | default: include.date | date: '%b' %}
+{% assign month_name_full = include.t.months[month_key] | default: include.date | date: '%B' %}
+{% assign day_name = include.t.days[weekday] | default: weekday %}
+
+{%- comment -%}
+    Substitui tokens do date_format:
+    %-d, %d, %m, %b, %B, %Y, %A
+    Caso t não contenha traduções, usa saída do filtro date.
+{%- endcomment -%}
+
+{% assign out = df %}
+{% comment %} substituir %-d antes de %d {% endcomment %}
+{% if out contains '%-d' %}
+    {% assign out = out | replace: '%-d', day_nozero %}
+{% endif %}
+{% if out contains '%d' %}
+    {% assign out = out | replace: '%d', day %}
+{% endif %}
+{% if out contains '%Y' %}
+    {% assign out = out | replace: '%Y', year %}
+{% endif %}
+{% if out contains '%m' %}
+    {% assign out = out | replace: '%m', month_key %}
 {% endif %}
 
-{% assign day_name = '' %}
-{% if include.t and include.t.days and include.t.days[weekday] %}
-    {% assign day_name = include.t.days[weekday] %}
-{% else %}
-    {% assign day_name = weekday %}
+{% if out contains '%b' %}
+    {% assign out = out | replace: '%b', month_name %}
+{% endif %}
+{% if out contains '%B' %}
+    {% assign out = out | replace: '%B', month_name_full %}
+{% endif %}
+{% if out contains '%A' %}
+    {% assign out = out | replace: '%A', day_name %}
 {% endif %}
 
-{{ day_name }}, {{ day }} de {{ month_name }} de {{ year }}
+{{ out }}
