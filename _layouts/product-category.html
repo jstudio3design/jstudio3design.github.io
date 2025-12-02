@@ -7,13 +7,13 @@ hero_height: is-small
     <div class="column is-12">
         {{ page.content }}
     </div>
-    
+
     {% if page.collection and site[page.collection] %}
         {% assign sorted_products = site[page.collection] | sort: page.sort %}
     {% elsif site.products %}
         {% assign sorted_products = site.products | sort: page.sort %}
     {% else %}
-        {% assign sorted_products = nil %}
+        {% assign sorted_products = null %}
     {% endif %}
 
     {% for product in sorted_products %}
@@ -23,14 +23,19 @@ hero_height: is-small
                     {% if product.image %}
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="{{ product.image }}" style="max-width:100%; height:auto;" alt="{{ product.title }}">
+                                <img
+                                    src="{{ product.image }}"
+                                    style="max-width:100%; height:auto;"
+                                    alt="{{ product.title }}"
+                                >
                             </figure>
                         </div>
                     {% endif %}
                     <div class="card-content">
                         <p class="title is-4">{{ product.title }}</p>
                         <p class="subtitle is-4">{{ product.subtitle }}</p>
-                        <p class="title is-5 has-text-right">{{ product.price }}</p>
+                        <br>
+                        <p class="title is-5 has-text-right">R${{ product.price-br }}</p>
                     </div>
                 </div>
             </a>

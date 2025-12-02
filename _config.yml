@@ -25,8 +25,7 @@ paginate_path: "/blog/page:num"
 
 disqus:
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  shortname: 
-
+  shortname:
 
 plugins:
   - jekyll-sitemap
@@ -88,5 +87,3 @@ collections:
     show_sidebar: false
 
 social:
-
-  
