@@ -19,6 +19,10 @@ $card-background-color: rgb(25, 25, 25);
 $card-radius: 1rem;
 $card-shadow: none;
 
+.body {
+    touch-action:none;
+}
+
 figure.header-logo {
     width: 4rem;
     height: 4rem;
